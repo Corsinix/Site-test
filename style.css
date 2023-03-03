@@ -159,7 +159,7 @@
   }
   header {
     height: 400px;
-    background-image: url("images/background.webp");
+    background-image: url("images/background.jpg");
     background-size: cover;
     margin: 0 0 100px 0;
   }
@@ -169,10 +169,17 @@
     padding: 100px;
   }
   main {
-    display: flex;
-    justify-content: space-around;
+    padding-bottom: 30px;
   }
-  main #container{
+  main section {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  } 
+  main section #container{
     border: solid 5px;
     border-radius: 4px;
     width: 17%;
@@ -185,31 +192,49 @@
     font-size: 1.4rem;
     margin: 0px 10px;
   }
+  main #ytb-section{
+    display:block;
+ }
+ main #ytb-section h2{
+    text-align: center;
+ }
+ main #ytb-section #vod {
+	margin:30px auto;
+	height: 480px;
+	display:block;
+ }
+
+  
   @media (max-width: 960px) {
-    main {
-        display: block;
+      main section {
+        flex-direction: column;
       }
-      main #container{
+      main section #container{
         width: 50%;        
         margin: 30px auto;
       }
-      main #container p{
+      main section #container p{
         text-align: center;
         font-size: 2rem;
         margin: 0px 20px;
       }
+      main #ytb-section #vod {
+        height: 320px;
+        width:90%;
+        margin-top:40px;
+      }
   }
   @media (max-width: 480px) {
-    main {
-        display: block;
-      }
-      main #container{
+      main section #container{
         width: 50%;        
         margin: 30px auto;
       }
-      main #container p{
+      main section #container p{
         text-align: center;
         font-size: 1.3rem;
         margin: 0px 20px;
+      }
+      main #ytb-section #vod {
+        height: 240px;
       }
   }
